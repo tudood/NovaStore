@@ -1,16 +1,14 @@
 <script setup lang="ts">
 
 import { ref, computed, onMounted } from 'vue';
-import { getProducts, getProduct } from '../api/product';
+import { getProducts } from '../api/product';
 import { useCartStore } from '../stores/cart';
-import { useRouter } from 'vue-router';
 import { useUserStore } from '../stores/user';
 import { showToast } from '../composables/useToast';
 // 商品数据
 const products = ref<any[]>([]);
 const loading = ref(false);
 const cartStore = useCartStore();
-const router = useRouter();
 const userStore = useUserStore();
 const handleLogout = () => {
   userStore.logout();
