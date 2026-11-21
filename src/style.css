@@ -294,3 +294,37 @@ code {
     border-right-color: var(--border);
   }
 }
+/* 全局响应式基础设置 */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 手机屏幕适配 */
+@media (max-width: 768px) {
+  #app {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+  }
+
+  h1 {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

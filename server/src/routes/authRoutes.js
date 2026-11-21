@@ -14,10 +14,10 @@ router.post('/register', async (req, res) => {
     // 检查必填信息
     if (!username || !email || !password) {
         if (password.length < 8 || password.length > 72) {
-    return res.status(400).json({
-        message: 'Password must be between 8 and 72 characters'
+        return res.status(400).json({
+            message: 'Password must be between 8 and 72 characters'
         });
-    }
+        }
       return res.status(400).json({
         message: 'Please provide all required fields'
       });
